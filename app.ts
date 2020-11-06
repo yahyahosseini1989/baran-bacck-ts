@@ -4,6 +4,7 @@ import * as mongoose from 'mongoose';
 // const signinRouter = require('./routes/signin')
 import signinRouter from './routes/signin'
 import signupRouter from './routes/signup'
+import personRouter from './routes/person'
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(express.json())
 
 app.use('/signin',signinRouter)
 app.use('/signup',signupRouter)
+app.use('/person',personRouter)
 
 app.get('/',(req,res ,nxt)=>{
     res.send("hi")
